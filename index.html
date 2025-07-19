@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Message for Bahnishikha</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <audio id="bg-music" loop>
+        <source src="assets/bg-music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div id="scene1" class="scene active">
+        <div class="welcome-container">
+            <h1>Hi Bahnishikha,</h1>
+            <p>I have a little something for you.</p>
+            <button id="catch-btn">💌 Open</button>
+            <p id="tap-counter" class="hidden">Taps: 0</p>
+        </div>
+    </div>
+
+    <div id="letter-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>A Letter For You</h2>
+            <div class="letter-body">
+                <p>To Bahnishikha,</p>
+                <p>Hey you 🌸</p>
+                <p>I just wanted to take a moment and let you know how genuinely grateful I am to have you in my life. You have this calm way of making everything around you feel a little more peaceful — like sitting near a window while it rains, or hearing your favorite old song when you least expect it.</p>
+                <p>Conversations with you never feel forced. They're easy, real, and somehow always leave me smiling afterward. It's rare to find someone who can just be — no drama, no show, just pure and true. You’re that kind of rare.</p>
+                <p>And maybe it’s just me, but the way you see the world? It's something else. The way you notice the little things, the way you care quietly — it all speaks louder than you know. People like that stay with you, even in silence.</p>
+                <p>Sometimes, in the middle of an ordinary day, I’ll catch myself smiling out of nowhere — and more often than not, it’s something you said or did. Funny how some people make the background of your life feel a bit more vivid. Like maybe the colors were always there… but they only started making sense after someone helped you see them properly.</p>
+                <p>You probably won’t even realize how much your presence means to those around you. And that’s what makes it all the more beautiful.</p>
+                <p>Anyway, just wanted to say thanks — for being you. 🌷</p>
+                <p>No expectations. Just appreciation.<br>Always rooting for you,</p>
+                <p>— Debojit</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="scene3" class="scene hidden">
+        <div id="stars-background"></div>
+        <div class="constellation-container">
+            <h2 id="constellation-instruction">Connect the stars to reveal a message.</h2>
+            <svg id="constellation-svg"></svg>
+            <div class="star" id="star1" data-order="1" style="top: 20%; left: 30%;"></div>
+            <div class="star" id="star2" data-order="2" style="top: 40%; left: 65%;"></div>
+            <div class="star" id="star3" data-order="3" style="top: 70%; left: 55%;"></div>
+            <div class="star" id="star4" data-order="4" style="top: 60%; left: 20%;"></div>
+            <p id="constellation-reveal" class="hidden">You have a kind of beauty that isn’t just in the way you look — it’s in the way you carry yourself, the way you speak gently, think deeply, and care quietly — and I truly hope you know how rare and proud of yourself you should be.</p>
+            <button id="next-to-wishing-jar" class="hidden">Next &rarr;</button>
+        </div>
+    </div>
+
+    <div id="scene4" class="scene hidden">
+        <div class="wishing-jar-container">
+            <h2>What is one hope you have for the year ahead?</h2>
+            <p class="subtitle">Your wish is private and will disappear into the stars.</p>
+            <textarea id="wish-input" placeholder="Type your wish here..."></textarea>
+            <button id="send-to-jar-btn">Send into the Jar</button>
+            <div id="jar-container">
+                <div class="jar"></div>
+                <div class="jar-lid"></div>
+            </div>
+            <p id="final-message" class="hidden">May all your hopes and dreams come true. Happy Birthday.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
